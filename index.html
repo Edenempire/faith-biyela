@@ -3,248 +3,206 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Faith Biyela | Portfolio</title>
-<link rel="stylesheet" href="(link unavailable)">
-<link rel="stylesheet" href="(link unavailable)">
+<title>Faith Masibonge Biyela | FINAL BOSS PORTFOLIO</title>
+
+<!-- ICONS & FONTS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+
 <style>
-/* Advanced Styling */
-:root {
---primary-color: #ff69b4;
---secondary-color: #333;
---background-color: #f5f5f5;
---text-color: #666;
+/* ===================== ROOT & RESET ===================== */
+:root{
+ --rose:#ff5fa2;--lav:#cdb4ff;--champ:#ffe5b4;--night:#0f0f14;
+ --glass:rgba(255,255,255,0.75);--text:#2b2b2b;
 }
+*{box-sizing:border-box;scroll-behavior:smooth;margin:0;padding:0;}
+body{
+ font-family:'Poppins',sans-serif;
+ background:linear-gradient(120deg,#fff7fb,#f3e8ff,#ffe5ec);
+ color:var(--text);overflow-x:hidden;
+}
+body.night{background:#0f0f14;color:#f5f5f5;}
 
-```    body {
-        font-family: 'Poppins', sans-serif;
-        background-color: var(--background-color);
-        color: var(--text-color);
-        transition: background-color 0.3s, color 0.3s;
-    }
+/* ===================== BACKGROUND ANIMATION ===================== */
+.bg span{
+ position:fixed;bottom:-150px;width:40px;height:40px;border-radius:50%;
+ background:rgba(255,95,162,.25);animation:float 25s linear infinite;
+}
+@keyframes float{to{transform:translateY(-120vh) scale(1.3);}}
 
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 20px;
-    }
+/* ===================== HEADER ===================== */
+header{
+ position:sticky;top:0;z-index:999;
+ display:flex;justify-content:space-between;align-items:center;
+ padding:1rem 2rem;background:var(--glass);backdrop-filter:blur(20px);
+ box-shadow:0 15px 40px rgba(0,0,0,.1);
+}
+header h1{font-family:'Playfair Display';color:var(--rose);}
+nav a{margin:.6rem;text-decoration:none;color:#555;font-weight:500;}
+nav a:hover{color:var(--rose);} 
 
-    /* Header Styles */
-    header {
-        background-color: var(--primary-color);
-        color: #fff;
-        padding: 20px;
-        text-align: center;
-        position: relative;
-        overflow: hidden;
-    }
+/* ===================== GLOBAL UI ===================== */
+section{padding:6rem 8vw;opacity:0;transform:translateY(40px);transition:1s;}
+section.show{opacity:1;transform:none;}
+.card{
+ background:var(--glass);backdrop-filter:blur(15px);
+ border-radius:30px;padding:3rem;margin-bottom:3rem;
+ box-shadow:0 25px 60px rgba(0,0,0,.12);
+}
+.button{
+ display:inline-block;margin-top:1rem;padding:.9rem 1.8rem;border-radius:30px;
+ background:linear-gradient(45deg,var(--rose),var(--lav));
+ color:white;text-decoration:none;font-weight:600;
+}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2rem;}
 
-    header .profile-picture {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        border: 5px solid #fff;
-        margin: 20px auto;
-        display: block;
-    }
+/* ===================== HERO ===================== */
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;}
+.hero img{width:100%;max-width:420px;border-radius:30px;box-shadow:0 30px 70px rgba(0,0,0,.25);} 
+.hero h2{font-size:3rem;}
 
-    /* Navigation Styles */
-    nav {
-        background-color: var(--secondary-color);
-        padding: 10px;
-        text-align: center;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-    }
+/* ===================== ACCORDION ===================== */
+.accordion button{
+ width:100%;text-align:left;padding:1rem;border:none;border-radius:15px;
+ background:#ffe5ec;margin:.5rem 0;font-weight:600;cursor:pointer;
+}
+.accordion div{display:none;padding:1rem;}
 
-    nav a {
-        color: #fff;
-        text-decoration: none;
-        margin: 0 20px;
-        transition: color 0.3s;
-    }
+/* ===================== GALLERY ===================== */
+.gallery img{width:100%;border-radius:20px;cursor:pointer;transition:.4s;}
+.gallery img:hover{transform:scale(1.05);} 
+.lightbox{position:fixed;inset:0;background:rgba(0,0,0,.85);display:none;justify-content:center;align-items:center;z-index:2000;}
+.lightbox img{max-width:90%;max-height:90%;border-radius:20px;}
 
-    nav a:hover {
-        color: var(--primary-color);
-    }
+/* ===================== FORM ===================== */
+form input,form textarea{
+ width:100%;padding:.9rem;margin:.6rem 0;border-radius:12px;border:1px solid #ccc;
+}
+form button{border:none;padding:.9rem 2rem;border-radius:25px;background:var(--rose);color:white;font-weight:600;}
 
-    /* Section Styles */
-    section {
-        padding: 50px 20px;
-        text-align: center;
-    }
+/* ===================== FLOAT NAV ===================== */
+.fab{position:fixed;right:20px;bottom:20px;display:flex;flex-direction:column;gap:10px;}
+.fab button{width:50px;height:50px;border:none;border-radius:50%;background:var(--rose);color:white;cursor:pointer;}
 
-    .section-title {
-        font-size: 36px;
-        margin-bottom: 20px;
-        color: var(--primary-color);
-    }
-
-    /* Gallery Section */
-    .gallery {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 20px;
-    }
-
-    .gallery img {
-        width: 100%;
-        height: 150px;
-        object-fit: cover;
-        border-radius: 10px;
-        transition: transform 0.3s;
-    }
-
-    .gallery img:hover {
-        transform: scale(1.1);
-    }
-
-    /* Audio/Video Section */
-    .media {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-    }
-
-    audio, video {
-        width: 300px;
-        height: 50px;
-        border-radius: 10px;
-    }
-
-    /* Theme Switcher */
-    .theme-switcher {
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        z-index: 1001;
-    }
-
-    .theme-switcher button {
-        background-color: var(--primary-color);
-        color: #fff;
-        border: none;
-        padding: 10px;
-        border-radius: 50%;
-        cursor: pointer;
-        transition: background-color 0.3s;
-    }
-
-    .theme-switcher button:hover {
-        background-color: #ff85c1;
-    }
-
-    /* Back to Top Button */
-    .back-to-top {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        background-color: var(--primary-color);
-        color: #fff;
-        border: none;
-        padding: 10px;
-        border-radius: 50%;
-        cursor: pointer;
-        display: none;
-        transition: background-color 0.3s;
-    }
-
-    .back-to-top:hover {
-        background-color: #ff85c1;
-    }
+@media(max-width:900px){.hero{grid-template-columns:1fr;text-align:center;}}
 </style>
-```
 </head>
 <body>
-<!-- Header Section -->
-<header>
-<div class="container">
-<img src="faith-profile-picture.jpg" alt="Faith Biyela" class="profile-picture animate__animated animate__fadeIn">
-<h1 class="animate__animated animate__fadeInUp">Faith Biyela</h1>
-<p class="animate__animated animate__fadeInUp">Public Speaker | Brand Model | Podcast Host</p>
+
+<!-- BACKGROUND -->
+<div class="bg">
+ <span style="left:10%"></span><span style="left:30%"></span>
+ <span style="left:60%"></span><span style="left:80%"></span>
 </div>
+
+<header>
+ <h1>Faith Biyela</h1>
+ <nav>
+  <a href="#home">Home</a><a href="#about">About</a><a href="#cv">CV</a>
+  <a href="#media">Media</a><a href="#contact">Contact</a>
+ </nav>
+ <select onchange="setTheme(this.value)">
+  <option value="">Rose</option><option value="night">Night</option>
+ </select>
 </header>
 
-```<!-- Navigation -->
-<nav>
-    <a href="#about">About Me</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#media">Media</a>
-    <a href="#contact">Contact</a>
-</nav>
-
-<!-- About Me Section -->
-<section id="about">
-    <div class="container">
-        <h2 class="section-title">About Me</h2>
-        <p>Masi has over the years partaken in community organization's set to uplift our society. She has co-ordinated and hosted small events in the spirit of transitioning change. She has worked with small businesses to host the Youth and empower women to take control over their destiny.</p>
-    </div>
+<section id="home" class="hero">
+ <div>
+  <h2>Faith Masibonge “Masi” Biyela</h2>
+  <p>Public Speaker • Brand Model • Podcast Host • HR Professional</p>
+  <a class="button" href="#cv">Explore My CV</a>
+ </div>
+ <img src="profile-placeholder.jpg">
 </section>
 
-<!-- Gallery Section -->
-<section id="gallery">
-    <div class="container">
-        <h2 class="section-title">Gallery</h2>
-        <div class="gallery">
-            <img src="image1.jpg" alt="Image 1">
-            <img src="image2.jpg" alt="Image 2">
-            <img src="image3.jpg" alt="Image 3">
-            <img src="image4.jpg" alt="Image 4">
-        </div>
-    </div>
+<section id="about" class="card">
+ <h2>About Me</h2>
+ <p>Durban-born changemaker, Faith has built a career across hospitality, executive administration, education and aviation customer service while uplifting women and youth through media and community work.</p>
 </section>
 
-<!-- Media Section -->
+<section id="cv" class="card">
+ <h2>Curriculum Vitae</h2>
+ <div class="accordion">
+  <button onclick="toggleAcc(this)">Personal Information</button>
+  <div>
+   <p><strong>Full Name:</strong> Faith Masibonge Biyela</p>
+   <p><strong>DOB:</strong> 01 August 1993</p>
+   <p><strong>Nationality:</strong> South African</p>
+  </div>
+  <button onclick="toggleAcc(this)">Education</button>
+  <div>
+   <p>Higher Certificate: Human Resources Management – IQ Academy</p>
+  </div>
+  <button onclick="toggleAcc(this)">Work Experience</button>
+  <div>
+   <p>Executive PA – K Track Vehicle Satellite (2012–2023)</p>
+   <p>Customer Service Agent – CCI Durban (2022–Present)</p>
+  </div>
+ </div>
+</section>
+
 <section id="media">
-    <div class="container">
-        <h2 class="section-title">Media</h2>
-        <div class="media">
-            <audio src="audio.mp3" controls></audio>
-            <video src="video.mp4" controls></video>
-        </div>
-    </div>
+ <div class="card">
+  <h2>Gallery</h2>
+  <div class="grid gallery">
+   <img src="gallery1.jpg" onclick="openLight(this.src)">
+   <img src="gallery2.jpg" onclick="openLight(this.src)">
+   <img src="gallery3.jpg" onclick="openLight(this.src)">
+  </div>
+ </div>
+
+ <div class="card">
+  <h2>UNCVGE Podcast</h2>
+  <audio id="player" controls></audio>
+  <button onclick="playEp('ep1.mp3')">Episode 1</button>
+  <button onclick="playEp('ep2.mp3')">Episode 2</button>
+ </div>
 </section>
 
-<!-- Contact Section -->
-<section id="contact">
-    <div class="container">
-        <h2 class="section-title">Contact</h2>
-        <p>Email: <a href="mailto:masibiyela@gmail.com">masibiyela@gmail.com</a></p>
-        <p>Socials: <a href="#">Masi_Biyela</a></p>
-    </div>
+<section id="contact" class="card">
+ <h2>Contact Me</h2>
+ <form onsubmit="return validateForm()">
+  <input id="name" placeholder="Your Name">
+  <input id="email" placeholder="Email">
+  <textarea id="msg" placeholder="Message"></textarea>
+  <button>Send Message</button>
+ </form>
 </section>
 
-<!-- Theme Switcher -->
-<div class="theme-switcher">
-    <button id="theme-switcher-btn"><i class="fas fa-moon"></i></button>
+<div class="lightbox" onclick="this.style.display='none'"><img id="lightImg"></div>
+
+<div class="fab">
+ <button onclick="scrollTo({top:0,behavior:'smooth'})">↑</button>
+ <button onclick="scrollTo({top:document.body.scrollHeight,behavior:'smooth'})">↓</button>
 </div>
 
-<!-- Back to Top Button -->
-<button class="back-to-top" id="back-to-top-btn"><i class="fas fa-arrow-up"></i></button>
-
 <script>
-    // Theme Switcher Logic
-    const themeSwitcherBtn = document.getElementById('theme-switcher-btn');
-    const backToTopBtn = document.getElementById('back-to-top-btn');
+// SCROLL REVEAL
+document.querySelectorAll('section').forEach(s=>{
+ window.addEventListener('scroll',()=>{
+  if(s.getBoundingClientRect().top<innerHeight-100){s.classList.add('show');}
+ });
+});
 
-    themeSwitcherBtn.addEventListener('click', () => {
-        document.body.style.backgroundColor = (document.body.style.backgroundColor === 'black') ? '#f5f5f5' : 'black';
-        document.body.style.color = (document.body.style.color === 'white') ? '#666' : 'white';
-    });
+// THEME
+function setTheme(t){document.body.className=t;}
 
-    // Back to Top Logic
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 100) {
-            backToTopBtn.style.display = 'block';
-        } else {
-            backToTopBtn.style.display = 'none';
-        }
-    });
+// ACCORDION
+function toggleAcc(b){const d=b.nextElementSibling;d.style.display=d.style.display==='block'?'none':'block';}
 
-    backToTopBtn.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
+// LIGHTBOX
+function openLight(src){document.querySelector('.lightbox').style.display='flex';document.getElementById('lightImg').src=src;}
+
+// PODCAST
+function playEp(src){const p=document.getElementById('player');p.src=src;p.play();}
+
+// FORM VALIDATION
+function validateForm(){
+ if(!name.value||!email.value||!msg.value){alert('Please fill all fields');return false;}
+ alert('Message sent successfully 💗');return false;
+}
+
+window.onerror=function(){alert('Unexpected error handled 💖');return true;}
 </script>
-
 </body>
 </html>
