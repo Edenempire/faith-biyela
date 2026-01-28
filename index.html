@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Faith Biyela | Portfolio</title>
+<link rel="stylesheet" href="(link unavailable)">
+<link rel="stylesheet" href="(link unavailable)">
+<style>
+/* Advanced Styling */
+:root {
+--primary-color: #ff69b4;
+--secondary-color: #333;
+--background-color: #f5f5f5;
+--text-color: #666;
+}
+
+```    body {
+        font-family: 'Poppins', sans-serif;
+        background-color: var(--background-color);
+        color: var(--text-color);
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    /* Header Styles */
+    header {
+        background-color: var(--primary-color);
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    header .profile-picture {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 5px solid #fff;
+        margin: 20px auto;
+        display: block;
+    }
+
+    /* Navigation Styles */
+    nav {
+        background-color: var(--secondary-color);
+        padding: 10px;
+        text-align: center;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 20px;
+        transition: color 0.3s;
+    }
+
+    nav a:hover {
+        color: var(--primary-color);
+    }
+
+    /* Section Styles */
+    section {
+        padding: 50px 20px;
+        text-align: center;
+    }
+
+    .section-title {
+        font-size: 36px;
+        margin-bottom: 20px;
+        color: var(--primary-color);
+    }
+
+    /* Gallery Section */
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .gallery img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 10px;
+        transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+        transform: scale(1.1);
+    }
+
+    /* Audio/Video Section */
+    .media {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    audio, video {
+        width: 300px;
+        height: 50px;
+        border-radius: 10px;
+    }
+
+    /* Theme Switcher */
+    .theme-switcher {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1001;
+    }
+
+    .theme-switcher button {
+        background-color: var(--primary-color);
+        color: #fff;
+        border: none;
+        padding: 10px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .theme-switcher button:hover {
+        background-color: #ff85c1;
+    }
+
+    /* Back to Top Button */
+    .back-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: var(--primary-color);
+        color: #fff;
+        border: none;
+        padding: 10px;
+        border-radius: 50%;
+        cursor: pointer;
+        display: none;
+        transition: background-color 0.3s;
+    }
+
+    .back-to-top:hover {
+        background-color: #ff85c1;
+    }
+</style>
+```
+</head>
+<body>
+<!-- Header Section -->
+<header>
+<div class="container">
+<img src="faith-profile-picture.jpg" alt="Faith Biyela" class="profile-picture animate__animated animate__fadeIn">
+<h1 class="animate__animated animate__fadeInUp">Faith Biyela</h1>
+<p class="animate__animated animate__fadeInUp">Public Speaker | Brand Model | Podcast Host</p>
+</div>
+</header>
+
+```<!-- Navigation -->
+<nav>
+    <a href="#about">About Me</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#media">Media</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<!-- About Me Section -->
+<section id="about">
+    <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <p>Masi has over the years partaken in community organization's set to uplift our society. She has co-ordinated and hosted small events in the spirit of transitioning change. She has worked with small businesses to host the Youth and empower women to take control over their destiny.</p>
+    </div>
+</section>
+
+<!-- Gallery Section -->
+<section id="gallery">
+    <div class="container">
+        <h2 class="section-title">Gallery</h2>
+        <div class="gallery">
+            <img src="image1.jpg" alt="Image 1">
+            <img src="image2.jpg" alt="Image 2">
+            <img src="image3.jpg" alt="Image 3">
+            <img src="image4.jpg" alt="Image 4">
+        </div>
+    </div>
+</section>
+
+<!-- Media Section -->
+<section id="media">
+    <div class="container">
+        <h2 class="section-title">Media</h2>
+        <div class="media">
+            <audio src="audio.mp3" controls></audio>
+            <video src="video.mp4" controls></video>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+    <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <p>Email: <a href="mailto:masibiyela@gmail.com">masibiyela@gmail.com</a></p>
+        <p>Socials: <a href="#">Masi_Biyela</a></p>
+    </div>
+</section>
+
+<!-- Theme Switcher -->
+<div class="theme-switcher">
+    <button id="theme-switcher-btn"><i class="fas fa-moon"></i></button>
+</div>
+
+<!-- Back to Top Button -->
+<button class="back-to-top" id="back-to-top-btn"><i class="fas fa-arrow-up"></i></button>
+
+<script>
+    // Theme Switcher Logic
+    const themeSwitcherBtn = document.getElementById('theme-switcher-btn');
+    const backToTopBtn = document.getElementById('back-to-top-btn');
+
+    themeSwitcherBtn.addEventListener('click', () => {
+        document.body.style.backgroundColor = (document.body.style.backgroundColor === 'black') ? '#f5f5f5' : 'black';
+        document.body.style.color = (document.body.style.color === 'white') ? '#666' : 'white';
+    });
+
+    // Back to Top Logic
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+            backToTopBtn.style.display = 'block';
+        } else {
+            backToTopBtn.style.display = 'none';
+        }
+    });
+
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+</script>
+
+</body>
+</html>
